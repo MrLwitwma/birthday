@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const name = document.getElementById('name');
     const body = document.body;
 
-    body.style.background = 'black';
+    body.style.display = 'none';
 
     while (!userName || userName.length > 22) {
       userName = prompt("Please enter your name (maximum 22 letters):");
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
       } else if (userName.length > 22) {
         console.log("Your name must be 22 characters or less.");
       } else {
-        body.style.background = 'white';
+        body.style.display = 'flex';
         name.textContent = userName;
       }
     }
